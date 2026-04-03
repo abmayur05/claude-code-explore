@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find . -maxdepth 2 -type f -name *.md -o -name *.json -o -name .cursorrules)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(node -e \"const p = require\\('./package.json'\\); console.log\\(JSON.stringify\\({ai: p.dependencies['ai'], '@ai-sdk/openai': p.dependencies['@ai-sdk/openai'], '@ai-sdk/provider': p.dependencies['@ai-sdk/provider']}, null, 2\\)\\)\")",
+      "Bash(node -e \"const p = require\\('./node_modules/zod/package.json'\\); console.log\\('zod:', p.version\\)\")",
+      "Bash(node -e \"const p = require\\('./node_modules/zod-to-json-schema/package.json'\\); console.log\\('zod-to-json-schema:', p.version\\)\")",
+      "Bash(node -e \"const p = require\\('./package.json'\\); console.log\\('zod dep:', p.dependencies.zod\\)\")",
+      "Bash(npm test:*)",
+      "mcp__claude_ai_Context7__resolve-library-id",
+      "Bash(npm view:*)",
+      "mcp__playwright",
+      "Bash(curl -s -m 3 http://localhost:3000)",
+      "Bash(curl -s -m 2 http://localhost:3000)",
+      "Bash(timeout 10 npm run dev)",
+      "Bash(curl -s http://localhost:3002)",
+      "Bash(netstat -ano)",
+      "WebSearch",
+      "Bash(npm run:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node:*)"
+    ]
+  }
+}
